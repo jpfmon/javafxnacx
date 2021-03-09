@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="anchorPane" fx:id="anchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar id="menubar" prefHeight="26.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="openFile" fx:id="selectFile" mnemonicParsing="false" onAction="#selectFile" text="Open File" />
+                  <MenuItem id="close" fx:id="close" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Info">
+            <items>
+              <MenuItem id="about" fx:id="about" mnemonicParsing="false" onAction="#info" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+
+      <TableView fx:id="tableView" layoutX="47.0" layoutY="77.0" prefHeight="407.0" prefWidth="721.0" AnchorPane.bottomAnchor="116.0" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="77.0">
+         <columns>
+            <TableColumn id="referencia" fx:id="referencia" prefWidth="75.0" text="Referencia" />
+             <TableColumn id="telefono" fx:id="telefono" prefWidth="75.0" text="Telefono" />
+             <TableColumn id="importe" fx:id="importe" prefWidth="75.0" text="Importe" />
+            <TableColumn id="importe" fx:id="destinatario" prefWidth="75.0" text="Destinatario" />
+            <TableColumn id="importe" fx:id="tipoReem" prefWidth="75.0" text="Tipo Reembolso" />
+            <TableColumn id="importe" fx:id="prodList1" prefWidth="75.0" text="Prod List 1" />
+            <TableColumn id="importe" fx:id="prodList2" prefWidth="75.0" text="Prod List 2" />
+            <TableColumn id="importe" fx:id="prodList3" prefWidth="75.0" text="Prod List 3" />
+            <TableColumn id="importe" fx:id="prodList4" prefWidth="75.0" text="Prod List 4" />
+            <TableColumn id="importe" fx:id="prodList5" prefWidth="75.0" text="Prod List 5" />
+         </columns></TableView>
+      <Button id="exec" fx:id="exec" layoutX="66.0" layoutY="514.0" mnemonicParsing="false" onAction="#loadData" text="Load Data" AnchorPane.bottomAnchor="60.4" AnchorPane.leftAnchor="30.0" />
+      <Button id="exec" fx:id="exec1" layoutX="160.0" layoutY="515.0" mnemonicParsing="false" onAction="#cleanData" text="Delete Data" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="150.0" />
+      <Group layoutX="35.0" layoutY="45.0" AnchorPane.leftAnchor="35.0">
+         <children>
+            <Label text="File Selected:" />
+            <Label fx:id="fileSelected" layoutX="105.0" prefHeight="18.0" prefWidth="302.0" wrapText="true">
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <effect>
+                  <ColorAdjust />
+               </effect></Label>
+         </children>
+      </Group>
+      <Group layoutX="446.0" layoutY="41.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Label layoutX="35.0" layoutY="5.0" prefHeight="17.0" prefWidth="152.0" text="Product Code to Add" />
+            <TextField fx:id="productCode" layoutX="190.0" prefHeight="26.0" prefWidth="91.0" promptText="enter code of product" />
+         </children>
+      </Group>
+      <Button id="exec" fx:id="exec2" layoutX="276.0" layoutY="515.0" mnemonicParsing="false" onAction="#checkDoubleProducts" text="Check doubled PRODUCTS" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="420.0" />
+       <Button id="exec" fx:id="exec3" layoutX="471.0" layoutY="515.0" mnemonicParsing="false" onAction="#checkDoubledOrders" text="Check doubled ORDERS" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="220.0" />
+       <Button id="exec" fx:id="exec4" layoutX="650.0" layoutY="515.0" mnemonicParsing="false" onAction="#addGiftedProduct" text="Add gifted product" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="60.0" />
+      <Label fx:id="doubledConfirmed" layoutX="468.0" layoutY="555.0" prefHeight="17.0" prefWidth="380.0" textFill="#f20404" AnchorPane.bottomAnchor="28.0" AnchorPane.rightAnchor="52.0" />
+      <Button fx:id="downFile" alignment="CENTER" layoutX="356.0" layoutY="551.0" mnemonicParsing="false" onAction="#downloadFileCont" style="-fx-alignment: center;" text="DOWNLOAD PROCESSED FILE" textAlignment="CENTER" textFill="#eb1212" AnchorPane.bottomAnchor="23.4" AnchorPane.rightAnchor="465.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
